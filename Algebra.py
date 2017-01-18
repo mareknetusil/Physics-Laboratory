@@ -66,7 +66,8 @@ class Vector():
     def __pow__(self, v):
         if Vector.dim_equality(self, v):
             if self.dim == 3:
-                return Vector([self.values[i-2]*v.values[i-1] - self.values[i-1]*v.values[i-2] for i in range(3)])
+                return Vector([self.values[i-2]*v.values[i-1] - \
+                             self.values[i-1]*v.values[i-2] for i in range(3)])
             elif self.dim == 2:
                 return self.values[0]*v.values[1] - self.values[1]*v.values[0]
         
